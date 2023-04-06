@@ -1,5 +1,5 @@
 #### set wd ####
-setwd("C:\\Users\\davide.bernasconi\\Desktop\\Submission paper clock-reset log-rank test\\Repository per codice su GitHub")
+#setwd("C:\\...")
 
 #### call the functions ####
 source("CR test for SM data.R")
@@ -9,7 +9,7 @@ source("CR test for ESM data.R")
 
 htdata<-read.table("htdata.txt",header=T,sep="")
 
-# seleziono soggetti status 2B ovvero quelli con minore priorità al trapianto
+# select only subjects with status=2B (lowest priority to transplant)
 htdata<-htdata[htdata$status=="2B",]
 
 table(htdata$HTx)
